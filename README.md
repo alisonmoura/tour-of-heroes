@@ -11,7 +11,7 @@
 > TypeScript
 
 ## Project Setup
-> npm install
+> $ npm install
 
 ## Project Run
-> npm start
+> $ npm start

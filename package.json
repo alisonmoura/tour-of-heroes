@@ -2,7 +2,7 @@
   "name": "angular-tour-of-heroes",
   "version": "1.0.0",
   "description": "A Heroes work manager in Angular2",
-  "main": "index.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
