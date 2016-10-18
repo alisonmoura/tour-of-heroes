@@ -25,7 +25,9 @@ const HEROES: Hero[] = [
 
   <h2>My Heroes</h2>
   <ul class="heroes">
-    <li *ngFor="let hero of heroes" (click)="onSelectHero(hero)">
+    <li *ngFor="let hero of heroes"
+     (click)="onSelectHero(hero)"
+     [class.selected]="hero === selectedHero">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
   </ul>
