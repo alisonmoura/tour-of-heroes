@@ -71,14 +71,18 @@ import { Hero } from './../models/hero';
 })
 export class AppComponent {
 
-  constructor(private heroService: HeroService){}
+  constructor(private heroService: HeroService) { }
 
   title = 'Tour of Heroes';
-  heroes = this.heroService.getHeroes();
   selectedHero: Hero;
+  heroes: Hero[] = [];
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
-  
+
 }
