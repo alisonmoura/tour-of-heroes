@@ -1,6 +1,7 @@
 
 /node_modules/
 /typings/
+/.vscode/
 
 *.map
 *.component.js
@@ -9,3 +10,4 @@
 
 main.js
 mock-heroes.js
+/app/models/*.js
