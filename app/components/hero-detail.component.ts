@@ -7,18 +7,9 @@ import { Hero } from './../models/hero';
 import { HeroService } from './../services/hero.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'hero-detail',
-  template: `
-    <h3>Hero Detail</h3>
-    <div *ngIf="hero">
-      <h2>{{hero.name}} details!</h2>
-      <div><label>id: </label>{{hero.id}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-      </div>
-    </div>
-    `
+  templateUrl: './../templates/hero-detail.component.html'
 })
 export class HeroDetailComponent implements OnInit {
 
@@ -31,6 +22,10 @@ export class HeroDetailComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.heroservice.getHero(+params['id']))
       .subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
