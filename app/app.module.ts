@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app.component';
+import { DashboardComponent } from './components/dashboard.component';
 import { HeroesComponent } from './components/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail.component'
 import { HeroService } from './services/hero.service'
@@ -14,12 +15,16 @@ import { HeroService } from './services/hero.service'
     FormsModule,
     RouterModule.forRoot([
       {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       }
     ])
   ],
-  declarations: [AppComponent, HeroDetailComponent, HeroesComponent],
+  declarations: [AppComponent, DashboardComponent, HeroDetailComponent, HeroesComponent],
   providers: [HeroService],
   bootstrap: [AppComponent]
 })
