@@ -1,0 +1,14 @@
+
+/node_modules/
+/typings/
+/.vscode/
+/dist/
+
+*.map
+*.component.js
+*.module.js
+*.service.js
+
+main.js
+mock-heroes.js
+/app/models/*.js
