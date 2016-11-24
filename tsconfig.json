@@ -1,12 +1,39 @@
 {
   "compilerOptions": {
+    "outDir": "dist/app",
     "target": "es5",
-    "module": "commonjs",
+    "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "filesGlob": [
+    "app/**/*.ts",
+    "typings/**/*.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "typings/globals/core-js/index.d.ts",
+    "typings/globals/jasmine/index.d.ts",
+    "typings/globals/node/index.d.ts",
+    "typings/index.d.ts",
+    "app/app.module.ts",
+    "app/components/app.component.ts",
+    "app/components/dashboard.component.ts",
+    "app/components/hero-detail.component.ts",
+    "app/components/heroes.component.ts",
+    "app/main.ts",
+    "app/mocks/mock-heroes.ts",
+    "app/models/hero.ts",
+    "app/services/hero.service.ts"
+  ]
 }
